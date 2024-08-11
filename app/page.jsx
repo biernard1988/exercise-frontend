@@ -1,6 +1,12 @@
 "use client"
 import { useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
+import {
+  FaSquareFacebook,
+  FaSquareXTwitter,
+  FaSquareInstagram,
+} from "react-icons/fa6"
 
 export default function Home() {
   const [showDialog, setShowDialog] = useState(false)
@@ -10,7 +16,7 @@ export default function Home() {
   }
 
   return (
-    <main className="container mx-auto flex justify-center items-center bg-lightGrayish">
+    <main className="container mx-auto w-full h-screen flex justify-center items-center bg-lightGrayish">
       <div className="w-[400px] md:w-7/12 md:h-[320px] bg-gray-50 shadow-lg flex flex-col md:flex-row justify-center items-center rounded-lg md:rounded-r-lg my-10">
         <Image
           className="rounded-t-lg md:rounded-l-lg"
@@ -62,28 +68,16 @@ export default function Home() {
 
             {showDialog && (
               <div className="absolute top-full mt-2 right-0 bg-darkGrayishBlue text-white p-4 rounded-lg shadow-lg">
-                <div className="flex justify-center gap-4">
-                  <a
-                    href="https://www.facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    🌐 Facebook
-                  </a>
-                  <a
-                    href="https://www.twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    🐦 Twitter
-                  </a>
-                  <a
-                    href="https://www.instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    📸 Instagram
-                  </a>
+                <div className="flex justify-center gap-5 text-2xl">
+                  <Link href="https://www.facebook.com" target="_blank">
+                    <FaSquareFacebook />
+                  </Link>
+                  <Link href="https://www.x.com" target="_blank">
+                    <FaSquareXTwitter />
+                  </Link>
+                  <Link href="https://www.instagram.com" target="_blank">
+                    <FaSquareInstagram />
+                  </Link>
                 </div>
               </div>
             )}
