@@ -16,10 +16,10 @@ export default function Home() {
   }
 
   return (
-    <main className="container mx-auto w-full h-screen flex justify-center items-center bg-lightGrayish">
+    <main className="container mx-auto w-[1440px] h-screen flex justify-center items-center bg-lightGrayish">
       <div className="w-[400px] md:w-7/12 md:h-[320px] bg-gray-50 shadow-lg flex flex-col md:flex-row justify-center items-center rounded-lg md:rounded-r-lg my-10">
         <Image
-          className="rounded-t-lg md:rounded-l-lg"
+          className="rounded-t-lg md:rounded-none md:rounded-l-lg"
           src="/images/drawers.jpg"
           alt="Furniture"
           style={{
@@ -29,7 +29,7 @@ export default function Home() {
           height={400}
         />
 
-        <div className="p-8 md:px-12 flex flex-col gap-2 md:gap-5 md:w-[60%]">
+        <div className="p-8 md:px-12 flex flex-col gap-2 md:gap-2 md:w-[60%]">
           <h1 className="font-bold text-darkGrayishBlue mb-4">
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
@@ -48,9 +48,9 @@ export default function Home() {
               alt="Michelle Appleton"
             />
             <div className="space-y-2">
-              <h5 className="text-darkGrayishBlue text-sm font-semibold">
+              <p className="text-darkGrayishBlue text-sm font-semibold">
                 Michelle Appleton
-              </h5>
+              </p>
               <p className="text-grayishBlue text-sm">28 Jun 2020</p>
             </div>
             <button
