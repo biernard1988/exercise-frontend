@@ -16,7 +16,7 @@ export default function Home() {
   }
 
   return (
-    <main className="container mx-auto w-[1440px] h-screen flex justify-center items-center bg-lightGrayish">
+    <main className="container mx-auto md:w-[1440px] h-screen flex justify-center items-center bg-lightGrayish">
       <div className="w-[400px] md:w-7/12 md:h-[320px] bg-gray-50 shadow-lg flex flex-col md:flex-row justify-center items-center rounded-lg md:rounded-r-lg my-10">
         <Image
           className="rounded-t-lg md:rounded-none md:rounded-l-lg"
@@ -56,14 +56,25 @@ export default function Home() {
             <button
               id="open-dialog"
               onClick={toggleDialog}
-              className="bg-lightGrayish rounded-full flex justify-center items-center w-12"
+              className={`${
+                showDialog ? "bg-pink-400" : "bg-lightGrayish"
+              } rounded-full flex justify-center items-center w-10 h-10`}
             >
-              <Image
-                src="/images/icon-share.svg"
-                width={20}
-                height={20}
-                alt="Share Icon"
-              />
+              {showDialog ? (
+                <Image
+                  src="/images/icon-twitter.svg"
+                  width={20}
+                  height={20}
+                  alt="Share Icon"
+                />
+              ) : (
+                <Image
+                  src="/images/icon-share.svg"
+                  width={20}
+                  height={20}
+                  alt="Close Icon"
+                />
+              )}
             </button>
 
             {showDialog && (
