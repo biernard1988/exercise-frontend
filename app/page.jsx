@@ -16,20 +16,19 @@ export default function Home() {
   }
 
   return (
-    <main className="container mx-auto md:w-[1440px] h-screen flex justify-center items-center bg-lightGrayish">
-      <div className="w-[400px] md:w-7/12 md:h-[320px] bg-gray-50 shadow-lg flex flex-col md:flex-row justify-center items-center rounded-lg md:rounded-r-lg my-10">
-        <Image
-          className="rounded-t-lg md:rounded-none md:rounded-l-lg"
-          src="/images/drawers.jpg"
-          alt="Furniture"
-          style={{
-            objectFit: "contain",
-          }}
-          width={400}
-          height={400}
-        />
+    <main className="container p-4 md:p-8 mx-auto h-screen flex justify-center items-center bg-lightGrayish">
+      <div className="w-96 md:w-2/3 bg-gray-50 shadow-lg flex flex-col lg:flex-row justify-center items-center rounded-lg md:rounded-r-lg">
+        <div className="lg:w-1/2">
+          <Image
+            className="rounded-t-lg md:rounded-none md:rounded-l-lg"
+            src="/images/drawers.jpg"
+            alt="Furniture"
+            width={6000}
+            height={600}
+          />
+        </div>
 
-        <div className="p-8 md:px-12 flex flex-col gap-2 md:gap-2 md:w-[60%]">
+        <div className="p-4 md:px-6 flex flex-col md:gap-2 lg:w-1/2 ">
           <h1 className="font-bold text-darkGrayishBlue mb-4">
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
@@ -39,7 +38,7 @@ export default function Home() {
             felt slightly bare and uninviting. I've got some simple tips to help
             you make any room feel complete.
           </p>
-          <div className="my-5 md:mb-0 flex gap-12 md:gap-8 relative md:mt-10">
+          <div className="flex justify-between sm:justify-start gap-10 items-center relative my-8">
             <Image
               src="/images/avatar-michelle.jpg"
               width={50}
